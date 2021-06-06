@@ -1,0 +1,99 @@
+.hero-section {
+  padding: 0;
+  background: $bg-dark-color;
+  background-image: linear-gradient(
+      90deg,
+      $overlay-transparent40,
+      $overlay-transparent40
+    ),
+    url(../images/hero/hero-bg-mob.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 577px) and (max-width: 959px) {
+    background-image: linear-gradient(
+        90deg,
+        $overlay-transparent40,
+        $overlay-transparent40
+      ),
+      url(../images/hero/hero-bg-tablet.webp);
+  }
+  @media screen and (min-width: 960px) {
+    background-image: linear-gradient(
+        90deg,
+        $overlay-transparent40,
+        $overlay-transparent40
+      ),
+      url(../images/hero/hero-bg.webp);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-section {
+    background: $bg-dark-color;
+    background-image: linear-gradient(
+        90deg,
+        $overlay-transparent40,
+        $overlay-transparent40
+      ),
+      url(../images/hero/hero-bg-mob@2x.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (min-width: 577px) and (max-width: 959px) {
+      background-image: linear-gradient(
+          90deg,
+          $overlay-transparent40,
+          $overlay-transparent40
+        ),
+        url(../images/hero/hero-bg-tablet@2x.webp);
+    }
+    @media screen and (min-width: 960px) {
+      background-image: linear-gradient(
+          90deg,
+          $overlay-transparent40,
+          $overlay-transparent40
+        ),
+        url(../images/hero/hero-bg@2x.webp);
+    }
+  }
+}
+
+.hero {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $bg-primary-color;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    height: 120px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

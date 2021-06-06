@@ -1,0 +1,36 @@
+.manufacture {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 0;
+  }
+}
+.manufacture-list {
+  display: flex;
+  justify-content: space-between;
+  margin: -15px;
+}
+.manufacture .list-item {
+  margin: 15px;
+}
+.manufacture-card {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.manufacture-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $overlay-transparent80;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: $bg-primary-color;
+}

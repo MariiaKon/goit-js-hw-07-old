@@ -1,0 +1,63 @@
+.advantages {
+  margin: -15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.advantages .list-item {
+  max-width: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
+}
+.advantages .list-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  max-width: 450px;
+  background-image: url(../images/icon/adv-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $bg-secondary-color;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.advantages .list-item:nth-child(1)::before {
+  background-image: url(../images/icon/antenna.svg);
+}
+.advantages .list-item:nth-child(2)::before {
+  background-image: url(../images/icon/clock.svg);
+}
+.advantages .list-item:nth-child(3)::before {
+  background-image: url(../images/icon/diagram.svg);
+}
+.advantages .list-item:nth-child(4)::before {
+  background-image: url(../images/icon/astronaut.svg);
+}
+.advantages h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: $title-color;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
+}
+.advantages p {
+  font-size: 14px;
+  line-height: 1.71;
+}
