@@ -4,7 +4,8 @@ const inputLength = inputEl.getAttribute('data-length');
 inputEl.addEventListener('blur', onInputBlur)
     
 function onInputBlur() {
-    if (inputLength == inputEl.value.length) {
+    const valueIsValid = Number(inputLength) === inputEl.value.length
+    if (valueIsValid) {
         inputEl.classList.remove('invalid');
         inputEl.classList.add('valid');
     } else {
