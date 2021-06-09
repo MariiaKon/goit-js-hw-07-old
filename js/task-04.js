@@ -8,12 +8,12 @@ decrementBtn.addEventListener('click', decrement);
 
 let currentValue = Number(counterValue.textContent);
 
-const increment = () => {
+function increment() {
     currentValue += 1;
     counterValue.textContent = currentValue;
 };
 
-const decrement = () => {
+function decrement () {
     currentValue -= 1;
     counterValue.textContent = currentValue;
 };
