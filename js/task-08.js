@@ -3,13 +3,14 @@ const boxDiv = document.getElementById('boxes');
 const input = document.querySelector('#controls input');
 const createBtn = document.querySelector('[data-action="render"]');
 const destroyBtn = document.querySelector('[data-action="destroy"]');
+let sizeValue = START_SIZE;
+
 
 createBtn.addEventListener('click', createBoxes);
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
     const amount = input.value;
-    let sizeValue = START_SIZE;
     
     for (let i = 0; i < amount; i++) {
         const divItem = document.createElement('div');
@@ -30,6 +31,11 @@ function getRandom(min, max){
 
 
 function destroyBoxes() {
+    if (input.value = '') {
+        input.value = 0;
+        sizeValue = 0;
+    }
+
     boxDiv.innerHTML = '';
     sizeValue = START_SIZE;
 }
