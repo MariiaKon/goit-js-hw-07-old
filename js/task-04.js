@@ -3,8 +3,8 @@ const incrementBtn = document.querySelector('button[data-action="increment"]')
 const decrementBtn = document.querySelector('button[data-action="decrement"]')
 
 
-incrementBtn.addEventListener('click', () => { increment() });
-decrementBtn.addEventListener('click', () => { decrement() });
+incrementBtn.addEventListener('click', increment);
+decrementBtn.addEventListener('click', decrement);
 
 let currentValue = Number(counterValue.textContent);
 
