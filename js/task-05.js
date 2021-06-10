@@ -6,6 +6,7 @@ input.addEventListener('input', onInputEvent)
 function onInputEvent (event) {
     if (input.value.trim() == '') {
         output.textContent = 'незнакомец';
+    } else {
+        output.textContent = input.value;
     }
-    output.textContent = input.value;
 }
