@@ -15,19 +15,21 @@ const images = [
 
 
 const galleryRef = document.getElementById('gallery');
+let imgItem;
+let galleryArr = [];
 
-images.forEach(image => {
-  const imgItem = `<li style='list-style: none; display: inline-flex; margin: auto;'>
-  <img src='${image.url}' alt='${image.alt}' style='margin: 10px; width: 360px; height: 300px;'>
-  </li>`
-  galleryRef.insertAdjacentHTML('beforeend', imgItem)
-});
+for (let i = 0; i < images.length; i++) {
+  imgItem = `<li style='list-style: none; display: inline-flex; margin: auto;'> 
+  <img src='${images[i].url}' alt='${images[i].alt}' style='margin: 10px; width: 360px; height: 300px;'>
+  </li>`;
+  galleryArr.push(imgItem);
+}
 
-
-galleryRef.style.display = 'flex'
-galleryRef.style.flexWrap = 'wrap'
-galleryRef.style.width = '1200px'
-galleryRef.style.padding = '30px'
-galleryRef.style.margin = 'auto'
+galleryRef.insertAdjacentHTML('beforeend', galleryArr.join(''));
 
 
+galleryRef.style.display = 'flex';
+galleryRef.style.flexWrap = 'wrap';
+galleryRef.style.width = '1200px';
+galleryRef.style.padding = '30px';
+galleryRef.style.margin = 'auto';
