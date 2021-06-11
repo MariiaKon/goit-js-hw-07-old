@@ -11,6 +11,7 @@ destroyBtn.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
     const amount = input.value;
+    let boxesArr = [];
     
     for (let i = 0; i < amount; i++) {
         const divItem = document.createElement('div');
@@ -21,8 +22,9 @@ function createBoxes() {
 
         sizeValue += 10;
 
-        boxDiv.appendChild(divItem);
+        boxesArr.push(divItem);
     }
+    boxDiv.append(...boxesArr);    
 }
 
 function getRandom(min, max){
